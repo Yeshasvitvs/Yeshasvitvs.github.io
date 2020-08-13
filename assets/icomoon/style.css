@@ -1,0 +1,549 @@
+@font-face {
+  font-family: 'Academicons';
+  src:  url('fonts/icomoon-academicons.eot?wui383');
+  src:  url('fonts/icomoon-academicons.eot?wui383#iefix') format('embedded-opentype'),
+    url('fonts/icomoon-academicons.ttf?wui383') format('truetype'),
+    url('fonts/icomoon-academicons.woff?wui383') format('woff'),
+    url('fonts/icomoon-academicons.svg?wui383#Academicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Academicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-podcasts:before {
+  content: "\e900";
+}
+.icon-strava:before {
+  content: "\e901";
+}
+.icon-goodreads:before {
+  content: "\e903";
+}
+.icon-microsoftteams:before {
+  content: "\e906";
+}
+.icon-shutterstock:before {
+  content: "\e904";
+}
+.icon-chess:before {
+  content: "\e905";
+}
+.icon-CV:before {
+  content: "\e90a";
+}
+.icon-Piazza:before {
+  content: "\e90c";
+}
+.icon-Overleaf:before {
+  content: "\e914";
+}
+.icon-ResearcherID:before {
+  content: "\e91a";
+}
+.icon-Springer:before {
+  content: "\e928";
+}
+.icon-IEEE:before {
+  content: "\e929";
+}
+.icon-Acclaim:before {
+  content: "\e92e";
+}
+.icon-CEUR:before {
+  content: "\e92f";
+}
+.icon-OSF:before {
+  content: "\e931";
+}
+.icon-Zotero:before {
+  content: "\e932";
+}
+.icon-Publons:before {
+  content: "\e937";
+}
+.icon-OpenAccess:before {
+  content: "\e939";
+}
+.icon-Acclaim1:before {
+  content: "\e93a";
+}
+.icon-ACM:before {
+  content: "\e93c";
+}
+.icon-Academia:before {
+  content: "\e93d";
+}
+.icon-dblp:before {
+  content: "\e93f";
+}
+.icon-ADS:before {
+  content: "\e94a";
+}
+.icon-Depsy:before {
+  content: "\e94b";
+}
+.icon-Publons1:before {
+  content: "\e94e";
+}
+.icon-dblp1:before {
+  content: "\e94f";
+}
+.icon-ResearcherID1:before {
+  content: "\e95c";
+}
+.icon-ACM1:before {
+  content: "\e95d";
+}
+.icon-ResearchGate:before {
+  content: "\e95f";
+}
+.icon-Coursera:before {
+  content: "\e960";
+}
+.icon-Zotero1:before {
+  content: "\e962";
+}
+.icon-ACMDL:before {
+  content: "\e96a";
+}
+.icon-SemanticScholar:before {
+  content: "\e96d";
+}
+.icon-CEUR1:before {
+  content: "\e96e";
+}
+.icon-SemanticScholar1:before {
+  content: "\e96f";
+}
+.icon-PhilPapers:before {
+  content: "\e970";
+}
+.icon-arXiv:before {
+  content: "\e974";
+}
+.icon-Depsy1:before {
+  content: "\e97a";
+}
+.icon-MathOverflow:before {
+  content: "\e97b";
+}
+.icon-Dryad:before {
+  content: "\e97c";
+}
+.icon-PubMed:before {
+  content: "\e97d";
+}
+.icon-DOI:before {
+  content: "\e97e";
+}
+.icon-Coursera1:before {
+  content: "\e97f";
+}
+.icon-Figshare:before {
+  content: "\e981";
+}
+.icon-PhilPapers1:before {
+  content: "\e98a";
+}
+.icon-bioRxiv:before {
+  content: "\e98b";
+}
+.icon-Dryad1:before {
+  content: "\e98c";
+}
+.icon-Overleaf1:before {
+  content: "\e98e";
+}
+.icon-Scirate:before {
+  content: "\e98f";
+}
+.icon-DOI1:before {
+  content: "\e990";
+}
+.icon-Piazza1:before {
+  content: "\e99a";
+}
+.icon-Springer1:before {
+  content: "\e99b";
+}
+.icon-PlataformaLattes:before {
+  content: "\e99c";
+}
+.icon-Scirate1:before {
+  content: "\e99d";
+}
+.icon-ResearchGate1:before {
+  content: "\e99f";
+}
+.icon-PubMed1:before {
+  content: "\e9a0";
+}
+.icon-bioRxiv1:before {
+  content: "\e9a2";
+}
+.icon-CV1:before {
+  content: "\e9a5";
+}
+.icon-arXiv1:before {
+  content: "\e9a6";
+}
+.icon-Impactstory:before {
+  content: "\e9aa";
+}
+.icon-Academia1:before {
+  content: "\e9af";
+}
+.icon-PlataformaLattes1:before {
+  content: "\e9b3";
+}
+.icon-IEEE1:before {
+  content: "\e9b9";
+}
+.icon-Orcid:before {
+  content: "\e9c3";
+}
+.icon-ADS1:before {
+  content: "\e9cd";
+}
+.icon-Impactstory1:before {
+  content: "\e9cf";
+}
+.icon-ACMDL1:before {
+  content: "\e9d3";
+}
+.icon-GoogleScholar:before {
+  content: "\e9d4";
+}
+.icon-Orcid1:before {
+  content: "\e9d9";
+}
+.icon-Dataverse:before {
+  content: "\e9e4";
+}
+.icon-Figshare1:before {
+  content: "\e9e7";
+}
+.icon-Inspire:before {
+  content: "\e9e9";
+}
+.icon-IDEASRePEc:before {
+  content: "\e9ed";
+}
+.icon-OSF1:before {
+  content: "\e9ef";
+}
+.icon-Mendeley:before {
+  content: "\e9f0";
+}
+.icon-Mendeley1:before {
+  content: "\e9f3";
+}
+.icon-OpenAccess1:before {
+  content: "\e9f4";
+}
+.icon-MathOverflow1:before {
+  content: "\e9f6";
+}
+.icon-Dataverse1:before {
+  content: "\e9f7";
+}
+.icon-IDEASRePEc1:before {
+  content: "\e9f8";
+}
+.icon-GoogleScholar1:before {
+  content: "\e9f9";
+}
+.icon-Inspire1:before {
+  content: "\e9fe";
+}
+.icon-book:before {
+  content: "\e91f";
+}
+.icon-library:before {
+  content: "\e921";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-bubbles:before {
+  content: "\e96c";
+}
+.icon-quotes-right:before {
+  content: "\e978";
+}
+.icon-wrench:before {
+  content: "\e991";
+}
+.icon-trophy:before {
+  content: "\e99e";
+}
+.icon-briefcase:before {
+  content: "\e9ae";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-star-empty:before {
+  content: "\2606";
+}
+.icon-star-half:before {
+  content: "\272e";
+}
+.icon-star-full:before {
+  content: "\2605";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-new-tab:before {
+  content: "\ea7e";
+}
+.icon-amazon:before {
+  content: "\ea87";
+}
+.icon-google:before {
+  content: "\ea88";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-google-drive:before {
+  content: "\ea8f";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-spotify1:before {
+  content: "\ea94";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-vine:before {
+  content: "\ea97";
+}
+.icon-vk:before {
+  content: "\ea98";
+}
+.icon-renren:before {
+  content: "\ea99";
+}
+.icon-sina-weibo:before {
+  content: "\ea9a";
+}
+.icon-rss:before {
+  content: "\ea9b";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-twitch:before {
+  content: "\ea9f";
+}
+.icon-vimeo:before {
+  content: "\eaa0";
+}
+.icon-lanyrd:before {
+  content: "\eaa2";
+}
+.icon-flickr2:before {
+  content: "\eaa4";
+}
+.icon-dribbble:before {
+  content: "\eaa7";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-deviantart:before {
+  content: "\eaaa";
+}
+.icon-500px:before {
+  content: "\eaab";
+}
+.icon-steam:before {
+  content: "\eaac";
+}
+.icon-dropbox:before {
+  content: "\eaae";
+}
+.icon-onedrive:before {
+  content: "\eaaf";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-npm:before {
+  content: "\eab1";
+}
+.icon-basecamp:before {
+  content: "\eab2";
+}
+.icon-trello:before {
+  content: "\eab3";
+}
+.icon-wordpress:before {
+  content: "\eab4";
+}
+.icon-joomla:before {
+  content: "\eab5";
+}
+.icon-ello:before {
+  content: "\eab6";
+}
+.icon-blogger:before {
+  content: "\eab7";
+}
+.icon-tumblr:before {
+  content: "\eab9";
+}
+.icon-yahoo:before {
+  content: "\eabb";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
+.icon-skype:before {
+  content: "\eac5";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}
+.icon-hackernews:before {
+  content: "\eac7";
+}
+.icon-wikipedia:before {
+  content: "\eac8";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-lastfm:before {
+  content: "\eacb";
+}
+.icon-delicious:before {
+  content: "\eacd";
+}
+.icon-stumbleupon:before {
+  content: "\eace";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+.icon-pinterest2:before {
+  content: "\ead2";
+}
+.icon-xing2:before {
+  content: "\ead4";
+}
+.icon-flattr:before {
+  content: "\ead5";
+}
+.icon-foursquare:before {
+  content: "\ead6";
+}
+.icon-yelp:before {
+  content: "\ead7";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-mail:before {
+  content: "\ea83";
+}
+.icon-rss2:before {
+  content: "\ea9c";
+}
+.icon-box-add:before {
+  content: "\e95e";
+}
+.icon-spinner11:before {
+  content: "\21bb";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-power-cord:before {
+  content: "\e9b7";
+}
+.icon-menu:before {
+  content: "\2630";
+}
+.icon-arrow-right2:before {
+  content: "\2192";
+}
+.icon-arrow-left2:before {
+  content: "\2190";
+}
+.icon-home3:before {
+  content: "\e902";
+}
+.icon-mail2:before {
+  content: "\ea84";
+}
+.icon-brightness-contrast:before {
+  content: "\e9d6";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-key:before {
+  content: "\e98d";
+}
+.icon-quill:before {
+  content: "\e907";
+}
+.icon-flag:before {
+  content: "\e9cc";
+}
+.icon-man-woman:before {
+  content: "\e9de";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-file-empty:before {
+  content: "\e924";
+}
+.icon-printer:before {
+  content: "\e954";
+}
+.icon-user-plus:before {
+  content: "\e973";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}

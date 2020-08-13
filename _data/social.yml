@@ -3,12 +3,32 @@ email:
   name: Email
   icon: icon-mail
   prepend: 'mailto:'
+mendeley:
+  name: Mendeley
+  icon: icon-Mendeley
+  prepend: 'https://www.mendeley.com/profiles/'
+ieee:
+  name: IEEE
+  icon: icon-IEEE
+  prepend: 'https://ieeexplore.ieee.org/author/'
+arxiv:
+  name: Arxiv
+  icon: icon-arXiv
+  prepend: 'https://arxiv.org/a/'
+researchgate:
+  name: Researchgate
+  icon: icon-ResearchGate
+  prepend: 'https://www.researchgate.net/profile/'
 amazon:
   name: Amazon
   icon: icon-amazon
 google:
   name: Google
   icon: icon-google
+google-scholar:
+  name: Google Scholar
+  icon: icon-GoogleScholar
+  prepend: 'https://scholar.google.it/citations?user='
 google-plus:
   name: Google+
   icon: icon-google-plus
@@ -31,6 +51,22 @@ spotify:
   name: Spotify
   icon: icon-spotify
   prepend: "https://play.spotify.com/"
+chess:
+  name: Chess
+  icon: icon-chess
+  prepend: 'https://www.chess.com/member/'
+shutterstock:
+  name: Shutterstock
+  icon: icon-shutterstock
+  prepend: 'https://www.shutterstock.com/g/'
+strava:
+  name: Strava
+  icon: icon-strava
+  prepend: 'https://www.strava.com/athletes/'
+goodreads:
+  name: Goodreads
+  icon: icon-goodreads
+  prepend: 'https://www.goodreads.com/user/show/'
 telegram:
   name: Telegram
   icon: icon-telegram
