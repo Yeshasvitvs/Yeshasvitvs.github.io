@@ -1,5 +1,11 @@
 <div class="sidebar-sticky">
   <div class="sidebar-about">
+    {% if author.picture %}
+      {% include_cached components/hy-img.html class="avatar" img=author.picture alt=author.name %}
+    {% elsif plugins contains 'jekyll-avatar' %}
+      {% assign avatar = author.social.github | default:author.github.username | default:author.github %}
+      {% include components/avatar-tag.html user=avatar %}
+    {% endif %}
     <!-- {% if site.logo %}
       <a class="no-hover" href="{{ '/' | relative_url }}" tabindex="-1">
         <img src="{% include_cached smart-url url=site.logo %}" class="avatar" alt="{{ site.short_title | default:site.title }}" width="120" height="120" loading="lazy" />
