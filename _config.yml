@@ -53,6 +53,8 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             CV
+    url:               /cv/
   - title:             About
     url:               /about/
 
