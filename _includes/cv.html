@@ -1,4 +1,5 @@
-<object data="{{ include.file }}" type="application/pdf" width="{{ include.width }}" height="{{ include.height }}">
+<object data="{{ include.file }}?#zoom=150" type="application/pdf" width="{{ include.width }}" height="{{ include.height }}">
+    <param name=”zoom” value=”150%” />
     <embed src="{{ include.file }}" type="application/pdf">
         <p>This browser does not support PDFs. <a href="{{ include.file }}">Please download the CV to view it</a>.</p>
     </embed>
