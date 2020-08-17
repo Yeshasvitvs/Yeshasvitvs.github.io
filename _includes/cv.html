@@ -1,6 +1,5 @@
-<figure>
-   <a href="{{ include.url }}">
-     <img src="{{ include.file }}" style="max-width: {{ include.max-width }};" alt="{{ include.alt }}"/>
-   </a>
-   <figcaption>{{ include.caption }}</figcaption>
-</figure>
+<object data="{{ include.file }}" type="application/pdf" width="{{ include.width }}" height="{{ include.height }}">
+    <embed src="{{ include.file }}" type="application/pdf">
+        <p>This browser does not support PDFs. <a href="{{ include.file }}">Please download the CV to view it</a>.</p>
+    </embed>
+</object>

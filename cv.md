@@ -1,8 +1,5 @@
 ---
-title:  Curriculum vitae
+title:  Curriculum Vitae
 layout: cv
-#file:   /assets/files/cv/Yeshasvi_Tirupachuri_CV.pdf
-file:   /assets/img/blog/blog-layout.jpg
+file:   /assets/files/cv/Yeshasvi_Tirupachuri_CV_awesome.pdf
 ---
-
-dbahadfhad
