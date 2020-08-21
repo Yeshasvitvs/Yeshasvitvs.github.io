@@ -3,3 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Python Environments
+.env
+.venv
+env/
+venv/
+.idea/
