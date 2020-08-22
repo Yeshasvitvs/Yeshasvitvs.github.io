@@ -38,11 +38,14 @@ def adjust_yticks(ax):
     for ytick, ylabel in zip(ax.get_yticks(), ax.get_yticklabels()):
         ylabel.set_position((10, 0))
 
-def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, labels='', colors=''):
+def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors=''):
 
     # Get language categories
     catergories = list(df)[1:]
     N = len(catergories)
+
+    # Get labels
+    labels = df['group'].tolist()
 
     # Divide plot for categories
     angles = [n / float(N) * 2 * pi for n in range(N)]
@@ -74,12 +77,7 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, labels
         values = df.loc[i].drop('group').values.flatten().tolist()
         values += values[:1]
 
-        if isinstance(labels, list):
-            ax.plot(angles, values, color=colors[i], alpha=0.85, linewidth=linewidth, linestyle='solid', label=labels[i])
-        else:
-            ax.plot(angles, values, color=colors[i], alpha=0.85, linewidth=linewidth, linestyle='solid')
-
-
+        ax.plot(angles, values, color=colors[i], alpha=0.85, linewidth=linewidth, linestyle='solid', label=labels[i])
         ax.fill(angles, values, color=colors[i], alpha=0.15)
 
     if len(df) > 1:
@@ -100,21 +98,21 @@ titlesize = 20
 # Languages dataframe
 # [ A1 - 1, A2 - 2, B1 - 3, B2 - 4, C1- 5, C2 - 6]
 languages_df = pd.DataFrame({
-    'group': ['International', 'Indian'],
+    'group':   ['International', 'Indian'],
     'English': [6, 0],
     'Italian': [2, 0],
-    'French': [1, 0],
+    'French':  [1, 0],
     'Spanish': [1, 0],
-    'Telugu': [0, 6],
-    'Hindi': [0, 4],
-    'Tamil': [0, 2]
+    'Telugu':  [0, 6],
+    'Hindi':   [0, 4],
+    'Tamil':   [0, 2]
 })
 
 ytickslen = 6
 yticks = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # Create Languages plot
-plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, labels=['International', 'Indian'], colors=[color(0), color(8)])
+plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(0), color(8)])
 
 # Technologies dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -124,21 +122,24 @@ plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytic
 #  Advanced - 4,
 #  Expert- 5]
 technologies_df = pd.DataFrame({
-    'group': ['Technologies'],
-    'C++': [3],
-    'Python': [2],
-    'Matlab/Simulink': [3],
-    'Qt': [3],
-    'Latex': [3],
-    'ROS': [4],
-    'YARP': [4],
-    'Ubuntu': [3],
-    'Git/Github': [4],
-    'Gazebo': [4],
+    'group': ['Programming', 'OS/Middleware', 'Tools'],
+    'C++':        [3, 0, 0],
+    'Matlab':     [3, 0, 0],
+    'Python':     [2, 0, 0],
+    'HTML':       [1, 0, 0],
+    'ROS':        [0, 4, 0],
+    'YARP':       [0, 4, 0],
+    'Ubuntu':     [0, 3, 0],
+    'Qt':         [0, 0, 3],
+    'Simulink':   [0, 0, 3],
+    'Latex':      [0, 0, 3],
+    'Git/Github': [0, 0, 4],
+    'Gazebo':     [0, 0, 4],
+    'PyCharm':    [0, 0, 2],
 })
 
 ytickslen = 5
 yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 
 # Create Technologies plot
-plot_radar(technologies_df, "Technologies", fontsize, linewidth, titlesize, ytickslen, yticks, labels='', colors=[color(0)])
+plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(1), color(5), color(9)])
