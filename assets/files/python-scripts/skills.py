@@ -53,7 +53,7 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors
 
     # Initialize figure
     dpi = 96
-    plt.figure(figsize=(1500 / dpi, 1500 / dpi), dpi=dpi)
+    plt.figure(figsize=(1700 / dpi, 1700 / dpi), dpi=dpi)
 
     # Initialise the radar plot
     ax = plt.subplot(111, polar=True, frameon=False)
@@ -63,12 +63,12 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors
     ax.set_theta_direction(-1)
 
     # Draw one axe per variable + add labels labels yet
-    plt.xticks(angles[:-1], catergories, color="grey", size=size)
+    plt.xticks(angles[:-1], catergories, color="grey", size=size[0])
     adjust_xticks(ax)
 
     # Draw ylabels
     ax.set_rlabel_position(0)
-    plt.yticks([*range(1, ytickslen+1, 1)], yticks, color="grey", alpha=0.9, size=size)
+    plt.yticks([*range(1, ytickslen+1, 1)], yticks, color="grey", alpha=0.9, size=size[1])
     plt.ylim(0, ytickslen)
     adjust_yticks(ax)
 
@@ -77,12 +77,12 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors
         values = df.loc[i].drop('group').values.flatten().tolist()
         values += values[:1]
 
-        ax.plot(angles, values, color=colors[i], alpha=0.85, linewidth=linewidth, linestyle='solid', label=labels[i])
-        ax.fill(angles, values, color=colors[i], alpha=0.15)
+        ax.plot(angles, values, color=colors[i], alpha=0.75, linewidth=linewidth, linestyle='solid', label=labels[i])
+        ax.fill(angles, values, color=colors[i], alpha=0.2)
 
     if len(df) > 1:
         # Add legend
-        plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1), fontsize=size)
+        plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1), fontsize=size[0])
 
     # Add title
     plt.title(title, loc='center', size=titlesize, y=-0.1, alpha=0.7)
@@ -92,7 +92,7 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors
 
 # General variables
 linewidth = 2.5
-fontsize  = 20
+fontsize  = [20, 20]
 titlesize = 20
 
 # Languages dataframe
@@ -109,7 +109,7 @@ languages_df = pd.DataFrame({
 })
 
 ytickslen = 6
-yticks = ["A1", "A2", "B1", "B2", "C1", "C2"]
+yticks    = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # Create Languages plot
 plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(0), color(8)])
@@ -130,19 +130,21 @@ technologies_df = pd.DataFrame({
     'ROS':        [0, 4, 0],
     'YARP':       [0, 4, 0],
     'Ubuntu':     [0, 3, 0],
-    'Qt':         [0, 0, 3],
-    'Simulink':   [0, 0, 3],
-    'Latex':      [0, 0, 3],
     'Git/Github': [0, 0, 4],
     'Gazebo':     [0, 0, 4],
+    'QtCreator':  [0, 0, 3],
+    'Simulink':   [0, 0, 3],
+    'Latex':      [0, 0, 3],
     'PyCharm':    [0, 0, 2],
+    'Lightroom':  [0, 0, 4],
 })
 
 ytickslen = 5
-yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
+yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
+fontsize  = [20, 12]
 
 # Create Technologies plot
-plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(4), color(9), color(12)])
+plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(5), color(10), color(15)])
 
 # Theory dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -153,8 +155,10 @@ plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, 
 #  Expert- 5]
 theory_df = pd.DataFrame({
     'group':                       ['Theory'],
-    'Robotics':                    [3],
+    'Robotics':                    [4],
     'Software Engineering':        [3],
+    # 'Data Structures & Algorithms':[2],
+    # 'Object Oriented Programming': [3],
     'Control Theory':              [3],
     'Machine Learning':            [2],
     'Optimization':                [2],
