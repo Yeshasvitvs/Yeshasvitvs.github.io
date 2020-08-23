@@ -14,6 +14,7 @@ Email: yeshasvitvs@gmail.com
 
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 import pandas as pd
 from math import pi
 
@@ -38,7 +39,7 @@ def adjust_yticks(ax):
     for ytick, ylabel in zip(ax.get_yticks(), ax.get_yticklabels()):
         ylabel.set_position((10, 0))
 
-def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors=''):
+def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, filename, colors=''):
 
     # Get language categories
     catergories = list(df)[1:]
@@ -87,13 +88,19 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, colors
     # Add title
     plt.title(title, loc='center', size=titlesize, y=-0.1, alpha=0.7)
 
+    # Save figure
+    plt.savefig(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')) + plotlocation + filename + fileformat,
+                dpi=dpi, transparent=False, bbox_inches='tight')
 
-    plt.show()
+    # Show plot
+    # plt.show()
 
 # General variables
-linewidth = 2.5
-fontsize  = [20, 20]
-titlesize = 20
+linewidth    = 2.5
+fontsize     = [25, 25]
+titlesize    = 30
+plotlocation = '/cv/skills/'
+fileformat   = '.png'
 
 # Languages dataframe
 # [ A1 - 1, A2 - 2, B1 - 3, B2 - 4, C1- 5, C2 - 6]
@@ -112,7 +119,7 @@ ytickslen = 6
 yticks    = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # Create Languages plot
-plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(0), color(8)])
+plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="language_skills", colors=[color(0), color(8)])
 
 # Technologies dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -141,10 +148,10 @@ technologies_df = pd.DataFrame({
 
 ytickslen = 5
 yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
-fontsize  = [20, 12]
+fontsize  = [25, 15]
 
 # Create Technologies plot
-plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(5), color(10), color(15)])
+plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="technical_skills", colors=[color(5), color(10), color(15)])
 
 # Theory dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -168,4 +175,4 @@ ytickslen = 5
 yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 
 # Create Technologies plot
-plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, colors=[color(17)])
+plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="theoretical_skills", colors=[color(17)])
