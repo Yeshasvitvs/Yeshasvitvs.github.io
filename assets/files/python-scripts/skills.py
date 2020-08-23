@@ -19,7 +19,7 @@ import pandas as pd
 from math import pi
 
 # Create a color palette
-color = plt.cm.get_cmap("Set3", 20)
+color = plt.cm.get_cmap("Set3", 10)
 
 def adjust_xticks(ax):
     for theta, xlabel in zip(ax.get_xticks(), ax.get_xticklabels()):
@@ -119,7 +119,7 @@ ytickslen = 6
 yticks    = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
 # Create Languages plot
-plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="language_skills", colors=[color(0), color(8)])
+plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="language_skills", colors=[color(2), color(5)])
 
 # Technologies dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -151,7 +151,7 @@ yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 fontsize  = [25, 15]
 
 # Create Technologies plot
-plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="technical_skills", colors=[color(5), color(10), color(15)])
+plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="technical_skills", colors=[color(3), color(4), color(7)])
 
 # Theory dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -175,4 +175,4 @@ ytickslen = 5
 yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 
 # Create Technologies plot
-plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="theoretical_skills", colors=[color(17)])
+plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="theoretical_skills", colors=[color(0)])
