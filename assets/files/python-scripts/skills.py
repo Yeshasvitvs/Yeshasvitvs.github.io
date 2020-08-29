@@ -53,8 +53,8 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, filena
     angles += angles[:1]
 
     # Initialize figure
-    dpi = 96
-    plt.figure(figsize=(1700 / dpi, 1700 / dpi), dpi=dpi)
+    dpi = 300
+    plt.figure(figsize=(4000 / dpi, 4000 / dpi), dpi=dpi)
 
     # Initialise the radar plot
     ax = plt.subplot(111, polar=True, frameon=False)
@@ -83,10 +83,12 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, filena
 
     if len(df) > 1:
         # Add legend
-        plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1), fontsize=size[0])
+        leg = plt.legend(loc='upper right', bbox_to_anchor=(0.1, 0.1), fontsize=size[0])
+        for text in leg.get_texts():
+            plt.setp(text, color='grey', alpha=0.9)
 
     # Add title
-    plt.title(title, loc='center', size=titlesize, y=-0.1, alpha=0.7)
+    plt.title(title, loc='center', size=titlesize, y=-0.15, alpha=0.7)
 
     # Save figure
     plt.savefig(os.path.abspath(os.path.join(os.path.dirname(__file__), '../')) + plotlocation + filename + fileformat,
@@ -96,11 +98,11 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, filena
     # plt.show()
 
 # General variables
-linewidth    = 2.5
-fontsize     = [25, 25]
-titlesize    = 30
+linewidth    = 4.5
+fontsize     = [35, 35]
+titlesize    = 40
 plotlocation = '/cv/skills/'
-fileformat   = '.png'
+fileformat   = '.svg'
 
 # Theory dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -153,7 +155,7 @@ technologies_df = pd.DataFrame({
 
 ytickslen = 5
 yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
-fontsize  = [25, 15]
+fontsize  = [35, 20]
 
 # Create Technologies plot
 plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="02_technical_skills", colors=[color(3), color(4), color(7)])
