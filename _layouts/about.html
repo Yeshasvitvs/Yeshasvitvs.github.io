@@ -16,6 +16,13 @@
 
 layout: base
 ---
+<style>
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
 
 <article class="page" role="article">
   {% if content contains "<!--author-->" %}
@@ -40,4 +47,13 @@ layout: base
   </header>
 
   {{ content }}
+  {% if page.skillspath %}
+    <div class="row" align="center">
+    {% for file in site.static_files %}
+      {% if file.path contains page.skillspath %}
+        {% include skills.html file=file.path width=20 height=20 %}
+      {% endif %}
+    {% endfor %}
+    </div>
+  {% endif %}
 </article>
