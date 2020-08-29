@@ -102,24 +102,29 @@ titlesize    = 30
 plotlocation = '/cv/skills/'
 fileformat   = '.png'
 
-# Languages dataframe
-# [ A1 - 1, A2 - 2, B1 - 3, B2 - 4, C1- 5, C2 - 6]
-languages_df = pd.DataFrame({
-    'group':   ['International', 'Indian'],
-    'English': [6, 0],
-    'Italian': [2, 0],
-    'French':  [1, 0],
-    'Spanish': [1, 0],
-    'Telugu':  [0, 6],
-    'Hindi':   [0, 4],
-    'Tamil':   [0, 2]
+# Theory dataframe
+# Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
+# [ Fundamental Awareness - 1,
+#  Novice - 2,
+#  Intermediate - 3,
+#  Advanced - 4,
+#  Expert- 5]
+theory_df = pd.DataFrame({
+    'group':                       ['Theory'],
+    'Robotics':                    [4],
+    'Software Engineering':        [3],
+    # 'Data Structures & Algorithms':[2],
+    # 'Object Oriented Programming': [3],
+    'Control Theory':              [3],
+    'Machine Learning':            [2],
+    'Optimization':                [2],
 })
 
-ytickslen = 6
-yticks    = ["A1", "A2", "B1", "B2", "C1", "C2"]
+ytickslen = 5
+yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 
-# Create Languages plot
-plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="language_skills", colors=[color(2), color(5)])
+# Create Technologies plot
+plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="01_theoretical_skills", colors=[color(0)])
 
 # Technologies dataframe
 # Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
@@ -151,28 +156,23 @@ yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
 fontsize  = [25, 15]
 
 # Create Technologies plot
-plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="technical_skills", colors=[color(3), color(4), color(7)])
+plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="02_technical_skills", colors=[color(3), color(4), color(7)])
 
-# Theory dataframe
-# Reference: https://hr.nih.gov/working-nih/competencies/competencies-proficiency-scale
-# [ Fundamental Awareness - 1,
-#  Novice - 2,
-#  Intermediate - 3,
-#  Advanced - 4,
-#  Expert- 5]
-theory_df = pd.DataFrame({
-    'group':                       ['Theory'],
-    'Robotics':                    [4],
-    'Software Engineering':        [3],
-    # 'Data Structures & Algorithms':[2],
-    # 'Object Oriented Programming': [3],
-    'Control Theory':              [3],
-    'Machine Learning':            [2],
-    'Optimization':                [2],
+# Languages dataframe
+# [ A1 - 1, A2 - 2, B1 - 3, B2 - 4, C1- 5, C2 - 6]
+languages_df = pd.DataFrame({
+    'group':   ['International', 'Indian'],
+    'English': [6, 0],
+    'Italian': [2, 0],
+    'French':  [1, 0],
+    'Spanish': [1, 0],
+    'Telugu':  [0, 6],
+    'Hindi':   [0, 4],
+    'Tamil':   [0, 2]
 })
 
-ytickslen = 5
-yticks = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
+ytickslen = 6
+yticks    = ["A1", "A2", "B1", "B2", "C1", "C2"]
 
-# Create Technologies plot
-plot_radar(theory_df, "Theoretical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="theoretical_skills", colors=[color(0)])
+# Create Languages plot
+plot_radar(languages_df, "Language Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="03_language_skills", colors=[color(2), color(5)])
