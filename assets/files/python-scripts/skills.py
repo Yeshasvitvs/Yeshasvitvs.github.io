@@ -99,7 +99,7 @@ def plot_radar(df, title, size, linewidth, titlesize,  ytickslen, yticks, filena
 
 # General variables
 linewidth    = 4.5
-fontsize     = [35, 35]
+fontsize     = [35, 30]
 titlesize    = 40
 plotlocation = '/cv/skills/'
 fileformat   = '.svg'
@@ -155,7 +155,7 @@ technologies_df = pd.DataFrame({
 
 ytickslen = 5
 yticks    = ["Fundamental", "Novice", "Intermediate", "Advanced", "Expert"]
-fontsize  = [35, 20]
+fontsize  = [35, 30]
 
 # Create Technologies plot
 plot_radar(technologies_df, "Technical Skills", fontsize, linewidth, titlesize, ytickslen, yticks, filename="02_technical_skills", colors=[color(3), color(4), color(7)])
