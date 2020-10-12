@@ -36,7 +36,9 @@ layout: base
         {% include components/avatar-tag.html user=avatar %}
       {% endif %}
 
+      <div style="text-align: justify">
       {{ author.about | markdownify }}
+      </div>
     {% endcapture %}
     {% assign content = content | replace:"<!--author-->", author_x %}
   {% endif %}
